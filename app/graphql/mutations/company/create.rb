@@ -1,12 +1,17 @@
+# frozen_string_literal: true
+
+# Mutations module
 module Mutations
+  # Company module
   module Company
+    # Create class
     class Create < BaseMutation
-      argument :name, String, required: true
+      argument :attributes, Types::CompanyAttributes, required: true
 
       type Types::CompanyType
 
-      def resolve(name: nil)
-        company = ::Company.create!(name: name)
+      def resolve(attributes:)
+        company = ::Company.create!(attributes.to_h)
         company.as_json
       end
     end
