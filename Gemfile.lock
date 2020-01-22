@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:ctran/annotate_models.git
+  revision: d49484327687ecff97f9f187797870c5591361f4
+  branch: develop
+  specs:
+    annotate (3.0.3)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 14.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,10 +56,14 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    batch-loader (1.4.1)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.4)
+    bullet (6.1.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.0.1)
     capybara (3.29.0)
       addressable
@@ -75,9 +88,14 @@ GEM
     crass (1.0.5)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.10.1)
+      i18n (>= 1.6, < 2)
     ffi (1.11.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
     graphql (1.10.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
@@ -174,6 +192,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.13.0)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -189,11 +208,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
+  batch-loader
   bootsnap (>= 1.1.0)
+  bullet
   byebug
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  faker
+  graphiql-rails
   graphql
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)

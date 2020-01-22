@@ -13,10 +13,6 @@
 #
 #  index_users_on_company_id  (company_id)
 #
-# Foreign Keys
-#
-#  company_id  (company_id => companies.id)
-#
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
