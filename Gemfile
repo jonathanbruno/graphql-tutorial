@@ -20,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'lerolero_generator'
   gem 'annotate', git: 'git@github.com:ctran/annotate_models.git', branch: 'develop'
   gem 'bullet'
   gem 'faker'
